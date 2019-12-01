@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29509.3
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B713D23B-6AFC-4C17-BDD7-C953495CB55C}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EC75C947-11FC-4A48-8C6C-C270175A5BF9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MBaumann.CodingGames.AdventOfCode2019", "src\MBaumann.CodingGames.AdventOfCode2019\MBaumann.CodingGames.AdventOfCode2019.csproj", "{2BDC869B-0447-437B-8C92-3B814118BAB1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{147C687E-C7EC-4DBA-985B-4CDEFD360451}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MBaumann.CodingGames.AdventOfCode2019.Tests", "test\MBaumann.CodingGames.AdventOfCode2019.Tests\MBaumann.CodingGames.AdventOfCode2019.Tests.csproj", "{32BC5F95-D641-4DF9-9F34-19C903F5444D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2BDC869B-0447-437B-8C92-3B814118BAB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BDC869B-0447-437B-8C92-3B814118BAB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BDC869B-0447-437B-8C92-3B814118BAB1}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2BDC869B-0447-437B-8C92-3B814118BAB1}.Debug|x64.Build.0 = Debug|Any CPU
+		{2BDC869B-0447-437B-8C92-3B814118BAB1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2BDC869B-0447-437B-8C92-3B814118BAB1}.Debug|x86.Build.0 = Debug|Any CPU
+		{2BDC869B-0447-437B-8C92-3B814118BAB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BDC869B-0447-437B-8C92-3B814118BAB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BDC869B-0447-437B-8C92-3B814118BAB1}.Release|x64.ActiveCfg = Release|Any CPU
+		{2BDC869B-0447-437B-8C92-3B814118BAB1}.Release|x64.Build.0 = Release|Any CPU
+		{2BDC869B-0447-437B-8C92-3B814118BAB1}.Release|x86.ActiveCfg = Release|Any CPU
+		{2BDC869B-0447-437B-8C92-3B814118BAB1}.Release|x86.Build.0 = Release|Any CPU
+		{32BC5F95-D641-4DF9-9F34-19C903F5444D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32BC5F95-D641-4DF9-9F34-19C903F5444D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32BC5F95-D641-4DF9-9F34-19C903F5444D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{32BC5F95-D641-4DF9-9F34-19C903F5444D}.Debug|x64.Build.0 = Debug|Any CPU
+		{32BC5F95-D641-4DF9-9F34-19C903F5444D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{32BC5F95-D641-4DF9-9F34-19C903F5444D}.Debug|x86.Build.0 = Debug|Any CPU
+		{32BC5F95-D641-4DF9-9F34-19C903F5444D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32BC5F95-D641-4DF9-9F34-19C903F5444D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32BC5F95-D641-4DF9-9F34-19C903F5444D}.Release|x64.ActiveCfg = Release|Any CPU
+		{32BC5F95-D641-4DF9-9F34-19C903F5444D}.Release|x64.Build.0 = Release|Any CPU
+		{32BC5F95-D641-4DF9-9F34-19C903F5444D}.Release|x86.ActiveCfg = Release|Any CPU
+		{32BC5F95-D641-4DF9-9F34-19C903F5444D}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2BDC869B-0447-437B-8C92-3B814118BAB1} = {EC75C947-11FC-4A48-8C6C-C270175A5BF9}
+		{32BC5F95-D641-4DF9-9F34-19C903F5444D} = {147C687E-C7EC-4DBA-985B-4CDEFD360451}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {251AA332-CD42-4A71-8BDE-2672061D4BD3}
+	EndGlobalSection
+EndGlobal
