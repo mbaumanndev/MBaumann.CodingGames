@@ -21,6 +21,9 @@ namespace MBaumann.CodingGames.AdventOfCode2019
             Console.WriteLine(Day1.FirstPart());
             Console.WriteLine(Day1.SecondPart());
 
+            Console.WriteLine(Day2.FirstPart());
+            Console.WriteLine(Day2.SecondPart());
+
             return false;
         }
     }

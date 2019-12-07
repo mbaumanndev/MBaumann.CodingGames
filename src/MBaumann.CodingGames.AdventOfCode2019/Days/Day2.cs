@@ -1,17 +1,45 @@
 ﻿using MBaumann.CommonTools.Linq;
 using System;
-using System.Collections;
-using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Text;
 
 namespace MBaumann.CodingGames.AdventOfCode2019.Days
 {
     public static class Day2
     {
-        public static void FirstPart()
+        public static int FirstPart()
         {
-            // TODO: Load file
+            int[] v_Input = GetInput();
+
+            return RunProgram(v_Input, 12, 2);
+        }
+
+        public static int SecondPart()
+        {
+            int[] v_Input = GetInput();
+
+            for (int i = 0; i < 99; i++)
+                for (int j = 0; j < 99; j++)
+                    if (RunProgram(v_Input, i, j) == 19690720)
+                        return 100 * i + j;
+
+            throw new ApplicationException();
+        }
+
+        private static int[] GetInput()
+        {
+            string v_RawInput = File.ReadAllText($"Inputs{Path.DirectorySeparatorChar}Day2.txt");
+            return v_RawInput.Split(new[] { ',' }).Select(int.Parse).ToArray();
+        }
+
+        public static int RunProgram(int[] p_OpCodes, int p_Noun, int p_Verb)
+        {
+            int[] v_OpCodes = (int[])p_OpCodes.Clone();
+
+            v_OpCodes[1] = p_Noun;
+            v_OpCodes[2] = p_Verb;
+
+            return ComputeOpCodes(v_OpCodes).First();
         }
 
         public static int[] ComputeOpCodes(int[] p_OpCodes)
