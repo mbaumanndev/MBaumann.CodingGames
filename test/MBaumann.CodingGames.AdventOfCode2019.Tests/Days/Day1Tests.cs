@@ -1,10 +1,9 @@
 using MBaumann.CodingGames.AdventOfCode2019.Days;
-using System;
 using Xunit;
 
 namespace MBaumann.CodingGames.AdventOfCode2019.Tests.Days
 {
-    public class Day1Tests
+    public sealed class Day1Tests
     {
         [Theory]
         [InlineData(12, 2)]
