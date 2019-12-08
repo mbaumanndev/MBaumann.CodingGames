@@ -45,7 +45,7 @@ namespace MBaumann.CodingGames.Common
 
                 ConsoleKeyInfo v_Infos = Console.ReadKey(true);
 
-                var sel = GetIndex();
+                var v_Index = GetIndex();
 
                 switch (v_Infos.Key)
                 {
@@ -69,7 +69,7 @@ namespace MBaumann.CodingGames.Common
                     case ConsoleKey.Enter:
                         Selected.Action?.Invoke();
 
-                        if (Selected.Items.Length > 0)
+                        if (Selected.Items?.Length > 0)
                         {
                             Current = Selected;
                             Selected = Current.Items[0];
@@ -78,68 +78,68 @@ namespace MBaumann.CodingGames.Common
                         break;
 
                     case ConsoleKey.UpArrow:
-                        if (sel > -1)
+                        if (v_Index > -1)
                         {
-                            sel -= lasLen;
+                            v_Index -= lasLen;
 
-                            if (sel < 0)
+                            if (v_Index < 0)
                             {
-                                sel += Current.Items.Length;
+                                v_Index += Current.Items.Length;
 
-                                if (sel < 0)
+                                if (v_Index < 0)
                                     break;
                             }
                         }
 
-                        Selected = Current.Items[sel];
+                        Selected = Current.Items[v_Index];
 
                         break;
 
                     case ConsoleKey.DownArrow:
-                        if (sel > -1)
+                        if (v_Index > -1)
                         {
-                            sel += lasLen;
+                            v_Index += lasLen;
 
-                            if (sel >= Current.Items.Length)
+                            if (v_Index >= Current.Items.Length)
                             {
-                                sel -= Current.Items.Length;
+                                v_Index -= Current.Items.Length;
 
-                                if (sel >= Current.Items.Length)
+                                if (v_Index >= Current.Items.Length)
                                     break;
                             }
                         }
 
-                        Selected = Current.Items[sel];
+                        Selected = Current.Items[v_Index];
 
                         break;
 
                     case ConsoleKey.LeftArrow:
-                        if (sel > -1)
+                        if (v_Index > -1)
                         {
-                            sel--;
+                            v_Index--;
 
-                            if (sel < 0)
+                            if (v_Index < 0)
                             {
-                                sel = Current.Items.Length - 1;
+                                v_Index = Current.Items.Length - 1;
                             }
                         }
 
-                        Selected = Current.Items[sel];
+                        Selected = Current.Items[v_Index];
 
                         break;
 
                     case ConsoleKey.RightArrow:
-                        if (sel > -1)
+                        if (v_Index > -1)
                         {
-                            sel++;
+                            v_Index++;
 
-                            if (sel == Current.Items.Length)
+                            if (v_Index == Current.Items.Length)
                             {
-                                sel = 0;
+                                v_Index = 0;
                             }
                         }
 
-                        Selected = Current.Items[sel];
+                        Selected = Current.Items[v_Index];
 
                         break;
                 }
@@ -177,7 +177,7 @@ namespace MBaumann.CodingGames.Common
 
             while (v_Parent != null)
             {
-                v_NavBuilder.Insert(0, v_Parent.Title);
+                v_NavBuilder.Insert(0, $"{v_Parent.Title} => ");
 
                 v_Parent = v_Parent.Parent;
             }
@@ -212,7 +212,7 @@ namespace MBaumann.CodingGames.Common
                     Console.Write(v_Title);
                     Console.ResetColor();
 
-                    System.Console.Write("".PadRight(COLUMN_GAP));
+                    Console.Write("".PadRight(COLUMN_GAP));
                 }
 
                 Console.WriteLine();

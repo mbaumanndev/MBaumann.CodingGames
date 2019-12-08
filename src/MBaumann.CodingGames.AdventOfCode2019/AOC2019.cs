@@ -9,10 +9,10 @@ namespace MBaumann.CodingGames.AdventOfCode2019
         public MenuItem GetGameMenu()
         {
             return new MenuItem("Advent Of Code 2019", new[] {
-                new MenuItem("Day 1 - Part 1", () => Console.WriteLine(Day1.FirstPart())),
-                new MenuItem("Day 1 - Part 2", () => Console.WriteLine(Day1.SecondPart())),
-                new MenuItem("Day 2 - Part 1", () => Console.WriteLine(Day2.FirstPart())),
-                new MenuItem("Day 2 - Part 2", () => Console.WriteLine(Day2.SecondPart())),
+                new PuzzleMenuItem("Day 1 - Part 1", () => Console.WriteLine(Day1.FirstPart())),
+                new PuzzleMenuItem("Day 1 - Part 2", () => Console.WriteLine(Day1.SecondPart())),
+                new PuzzleMenuItem("Day 2 - Part 1", () => Console.WriteLine(Day2.FirstPart())),
+                new PuzzleMenuItem("Day 2 - Part 2", () => Console.WriteLine(Day2.SecondPart())),
             });
         }
     }

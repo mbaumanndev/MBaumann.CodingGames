@@ -2,7 +2,7 @@
 
 namespace MBaumann.CodingGames.Common
 {
-    public sealed class MenuItem
+    public class MenuItem
     {
         public MenuItem(string p_Title, MenuItem[] p_Items) : this(p_Title, null, p_Items)
         {
@@ -24,9 +24,9 @@ namespace MBaumann.CodingGames.Common
             }
         }
 
-        public MenuItem Parent { get; internal set; }
-        public string Title { get; }
+        public MenuItem Parent { get; private set; }
+        public string Title { get; protected set; }
         public MenuItem[] Items { get; }
-        public Action Action { get; internal set; }
+        public Action Action { get; protected set; }
     }
 }
