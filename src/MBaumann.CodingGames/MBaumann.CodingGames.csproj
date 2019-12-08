@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MBaumann.CodingGames.AdventOfCode2019\MBaumann.CodingGames.AdventOfCode2019.csproj" />
+    <ProjectReference Include="..\MBaumann.CodingGames.Common\MBaumann.CodingGames.Common.csproj" />
+  </ItemGroup>
+
+</Project>
