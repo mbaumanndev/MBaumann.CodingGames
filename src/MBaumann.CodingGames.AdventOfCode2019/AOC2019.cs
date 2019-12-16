@@ -13,6 +13,7 @@ namespace MBaumann.CodingGames.AdventOfCode2019
                 new PuzzleMenuItem("Day 1 - Part 2", () => Console.WriteLine(Day1.SecondPart())),
                 new PuzzleMenuItem("Day 2 - Part 1", () => Console.WriteLine(Day2.FirstPart())),
                 new PuzzleMenuItem("Day 2 - Part 2", () => Console.WriteLine(Day2.SecondPart())),
+                new PuzzleMenuItem("Day 3 - Part 1", () => Console.WriteLine(Day3.FirstPart())),
             });
         }
     }
