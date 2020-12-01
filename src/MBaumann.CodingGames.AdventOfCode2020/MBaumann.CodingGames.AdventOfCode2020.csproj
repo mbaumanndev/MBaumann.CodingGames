@@ -16,6 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="morelinq" Version="3.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\MBaumann.CodingGames.Common\MBaumann.CodingGames.Common.csproj" />
     <ProjectReference Include="..\MBaumann.CommonTools\MBaumann.CommonTools.csproj" />
   </ItemGroup>

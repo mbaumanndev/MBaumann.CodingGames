@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using MoreLinq;
 
 namespace MBaumann.CodingGames.AdventOfCode2020.Days
 {
@@ -10,62 +11,24 @@ namespace MBaumann.CodingGames.AdventOfCode2020.Days
     {
         public static int FirstPart()
         {
-            var v_Tuple = ReadLines(FindExpenses);
-
-            return v_Tuple.Item1 * v_Tuple.Item2;
+            return FindExpenses(ReadLines(), 2).Aggregate((a, b) => a * b);
         }
 
         public static int SecondPart()
         {
-            var v_Tuple = ReadLines(FindExpenses2);
-
-            return v_Tuple.Item1 * v_Tuple.Item2 * v_Tuple.Item3;
+            return FindExpenses(ReadLines(), 3).Aggregate((a, b) => a * b);
         }
 
-        public static (int, int) FindExpenses(IEnumerable<int> p_Input)
+        public static IEnumerable<int> FindExpenses(IEnumerable<int> p_Input, int p_Subsets)
         {
-            foreach (var i in p_Input)
-            {
-                foreach (var j in p_Input)
-                {
-                    if (i + j == 2020)
-                        return (i, j);
-                }
-            }
-
-            throw new ApplicationException();
+            return p_Input
+                .Subsets(p_Subsets)
+                .First(s => s.Sum() == 2020);
         }
 
-
-        public static (int, int, int) FindExpenses2(IEnumerable<int> p_Input)
+        private static IEnumerable<int> ReadLines()
         {
-            foreach (var i in p_Input)
-            {
-                foreach (var j in p_Input)
-                {
-                    foreach (var k in p_Input)
-                    {
-                        if (i + j + k == 2020)
-                            return (i, j, k);
-                    }
-                }
-            }
-
-            throw new ApplicationException();
-        }
-
-        private static (int, int) ReadLines(Func<IEnumerable<int>, (int, int)> p_Action)
-        {
-            var v_Values = File.ReadAllLines($"Inputs{Path.DirectorySeparatorChar}Day1.txt").Select(int.Parse).ToList();
-
-            return p_Action(v_Values);
-        }
-
-        private static (int, int, int) ReadLines(Func<IEnumerable<int>, (int, int, int)> p_Action)
-        {
-            var v_Values = File.ReadAllLines($"Inputs{Path.DirectorySeparatorChar}Day1.txt").Select(int.Parse).ToList();
-
-            return p_Action(v_Values);
+            return File.ReadAllLines($"Inputs{Path.DirectorySeparatorChar}Day1.txt").Select(int.Parse);
         }
     }
 }
