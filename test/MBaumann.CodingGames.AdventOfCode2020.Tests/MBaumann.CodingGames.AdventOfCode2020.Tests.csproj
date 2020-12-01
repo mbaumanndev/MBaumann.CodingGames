@@ -4,12 +4,16 @@
     <TargetFramework>net5</TargetFramework>
 
     <IsPackable>false</IsPackable>
-
-    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="coverlet.msbuild" Version="2.9.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.8.0" />
+    <PackageReference Include="NFluent" Version="2.7.0" />
+    <PackageReference Include="NFluent.Analyzer" Version="0.1.0" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
       <PrivateAssets>all</PrivateAssets>
@@ -22,7 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\MBaumann.CommonTools\MBaumann.CommonTools.csproj" />
+    <ProjectReference Include="..\..\src\MBaumann.CodingGames.AdventOfCode2020\MBaumann.CodingGames.AdventOfCode2020.csproj" />
   </ItemGroup>
 
 </Project>

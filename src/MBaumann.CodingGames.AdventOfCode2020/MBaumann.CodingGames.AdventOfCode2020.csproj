@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Inputs\*.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Inputs\Day1.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MBaumann.CodingGames.Common\MBaumann.CodingGames.Common.csproj" />
+    <ProjectReference Include="..\MBaumann.CommonTools\MBaumann.CommonTools.csproj" />
+  </ItemGroup>
+</Project>
