@@ -29,14 +29,14 @@ namespace MBaumann.CodingGames.AdventOfCode2019.Days
             return v_Result;
         }
 
-        public static int ComputeNeededFuel(int p_ModuleMass)
+        internal static int ComputeNeededFuel(int p_ModuleMass)
         {
             double v_Temp = p_ModuleMass / 3.0;
             int v_Floor = (int)Math.Floor(v_Temp);
             return v_Floor - 2;
         }
 
-        public static int ComputeAllNeededFuel(int p_ModuleOrFuelMass)
+        internal static int ComputeAllNeededFuel(int p_ModuleOrFuelMass)
         {
             int v_FuelMass = ComputeNeededFuel(p_ModuleOrFuelMass);
 

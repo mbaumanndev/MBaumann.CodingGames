@@ -24,4 +24,8 @@
     <ProjectReference Include="..\MBaumann.CodingGames.Common\MBaumann.CodingGames.Common.csproj" />
     <ProjectReference Include="..\MBaumann.CommonTools\MBaumann.CommonTools.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleToSuffix Include=".Tests" />
+  </ItemGroup>
 </Project>

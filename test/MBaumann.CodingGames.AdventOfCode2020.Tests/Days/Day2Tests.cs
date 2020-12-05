@@ -17,7 +17,7 @@ namespace MBaumann.CodingGames.AdventOfCode2020.Tests.Days
         [InlineData("2-9 c: ccccccccc", true)]
         public void Part1(string p_Password, bool p_ExpectedResult)
         {
-            Check.That(Day2.PasswordMatchPolicy(p_Password)).IsEqualTo(p_ExpectedResult);
+            Check.That(Day2.PasswordWithPolicy(p_Password, Day2.PasswordMatchPolicy)).IsEqualTo(p_ExpectedResult);
         }
 
         
@@ -27,7 +27,7 @@ namespace MBaumann.CodingGames.AdventOfCode2020.Tests.Days
         [InlineData("2-9 c: ccccccccc", false)]
         public void Part2(string p_Password, bool p_ExpectedResult)
         {
-            Check.That(Day2.PasswordMatchNewPolicy(p_Password)).IsEqualTo(p_ExpectedResult);
+            Check.That(Day2.PasswordWithPolicy(p_Password, Day2.PasswordMatchNewPolicy)).IsEqualTo(p_ExpectedResult);
         }
     }
 }

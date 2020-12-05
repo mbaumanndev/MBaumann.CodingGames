@@ -12,15 +12,17 @@ namespace MBaumann.CodingGames.AdventOfCode2020.Days
         private static readonly Regex PASSWORD_POLICY_REGEX = new Regex(@"(\d+)-(\d+) ([a-z]{1}): ([a-z]+)", RegexOptions.Compiled);
         internal static int FirstPart()
         {
-            return File.ReadAllLines($"Inputs{Path.DirectorySeparatorChar}Day2.txt").Count(PasswordMatchPolicy);
+            return File.ReadAllLines($"Inputs{Path.DirectorySeparatorChar}Day2.txt")
+                .Count(p_Policy => PasswordWithPolicy(p_Policy, PasswordMatchPolicy));
         }
 
         public static int SecondPart()
         {
-            return File.ReadAllLines($"Inputs{Path.DirectorySeparatorChar}Day2.txt").Count(PasswordMatchNewPolicy);
+            return File.ReadAllLines($"Inputs{Path.DirectorySeparatorChar}Day2.txt")
+                .Count(p_Policy => PasswordWithPolicy(p_Policy, PasswordMatchNewPolicy));
         }
 
-        public static bool PasswordMatchPolicy(string p_Input)
+        internal static bool PasswordWithPolicy(string p_Input, Func<string, int, int, char, bool> p_Policy)
         {
             var v_Match = PASSWORD_POLICY_REGEX.Match(p_Input).Groups;
 
@@ -29,22 +31,20 @@ namespace MBaumann.CodingGames.AdventOfCode2020.Days
             var v_Max = int.Parse(v_Match[2].Value);
             var v_Char = char.Parse(v_Match[3].Value);
 
-            var v_Count = v_Password.Count(c => c == v_Char);
-
-            return v_Count >= v_Min && v_Count <= v_Max;
+            return p_Policy(v_Password, v_Min, v_Max, v_Char);
         }
 
-        public static bool PasswordMatchNewPolicy(string p_Input)
+        internal static bool PasswordMatchPolicy(string p_Password, int p_Min, int p_Max, char p_Char)
         {
-            var v_Match = PASSWORD_POLICY_REGEX.Match(p_Input).Groups;
+            var v_Count = p_Password.Count(c => c == p_Char);
 
-            var v_Password = v_Match[4].Value;
-            var v_Min = int.Parse(v_Match[1].Value);
-            var v_Max = int.Parse(v_Match[2].Value);
-            var v_Char = char.Parse(v_Match[3].Value);
+            return v_Count >= p_Min && v_Count <= p_Max;
+        }
 
-            var v_Check1 = v_Password.ElementAt(v_Min - 1) == v_Char;
-            var v_Check2 = v_Password.ElementAt(v_Max - 1) == v_Char;
+        internal static bool PasswordMatchNewPolicy(string p_Password, int p_Min, int p_Max, char p_Char)
+        {
+            var v_Check1 = p_Password.ElementAt(p_Min - 1) == p_Char;
+            var v_Check2 = p_Password.ElementAt(p_Max - 1) == p_Char;
 
             return v_Check1 ^ v_Check2;
         }

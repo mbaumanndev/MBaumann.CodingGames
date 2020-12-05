@@ -25,7 +25,7 @@ namespace MBaumann.CodingGames.AdventOfCode2019.Days
 
         private static readonly Point Origin = new Point(0, 0);
 
-        public static int ComputeDistance(string p_FirstPath, string p_SecondPath)
+        internal static int ComputeDistance(string p_FirstPath, string p_SecondPath)
         {
             return Intersections(p_FirstPath, p_SecondPath).Select(p_Point => Origin.ManhattanDistance(p_Point)).Min();
         }
@@ -85,7 +85,7 @@ namespace MBaumann.CodingGames.AdventOfCode2019.Days
             return v_Crossings;
         }
 
-        public static int ComputeSteps(string p_FirstPath, string p_SecondPath)
+        internal static int ComputeSteps(string p_FirstPath, string p_SecondPath)
         {
             List<int> v_Steps = new List<int>();
 

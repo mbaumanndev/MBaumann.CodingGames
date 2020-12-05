@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B713D23B-6AFC-4C17-BDD7-C953495CB55C}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		Directory.Build.targets = Directory.Build.targets
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EC75C947-11FC-4A48-8C6C-C270175A5BF9}"
@@ -28,9 +29,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MBaumann.CodingGames", "src
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MBaumann.CodingGames.Common", "src\MBaumann.CodingGames.Common\MBaumann.CodingGames.Common.csproj", "{A650BCE9-BFA2-465D-97A3-DCCA77D1696C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MBaumann.CodingGames.AdventOfCode2020", "src\MBaumann.CodingGames.AdventOfCode2020\MBaumann.CodingGames.AdventOfCode2020.csproj", "{3B238488-A44B-4013-9635-EDEFAFAFCE34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MBaumann.CodingGames.AdventOfCode2020", "src\MBaumann.CodingGames.AdventOfCode2020\MBaumann.CodingGames.AdventOfCode2020.csproj", "{3B238488-A44B-4013-9635-EDEFAFAFCE34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MBaumann.CodingGames.AdventOfCode2020.Tests", "test\MBaumann.CodingGames.AdventOfCode2020.Tests\MBaumann.CodingGames.AdventOfCode2020.Tests.csproj", "{16FCB016-944F-4C03-B75A-56F0BD78177F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MBaumann.CodingGames.AdventOfCode2020.Tests", "test\MBaumann.CodingGames.AdventOfCode2020.Tests\MBaumann.CodingGames.AdventOfCode2020.Tests.csproj", "{16FCB016-944F-4C03-B75A-56F0BD78177F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

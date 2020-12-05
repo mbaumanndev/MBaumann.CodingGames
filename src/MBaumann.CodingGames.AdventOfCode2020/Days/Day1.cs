@@ -19,7 +19,7 @@ namespace MBaumann.CodingGames.AdventOfCode2020.Days
             return FindExpenses(ReadLines(), 3).Aggregate((a, b) => a * b);
         }
 
-        public static IEnumerable<int> FindExpenses(IEnumerable<int> p_Input, int p_Subsets)
+        internal static IEnumerable<int> FindExpenses(IEnumerable<int> p_Input, int p_Subsets)
         {
             return p_Input
                 .Subsets(p_Subsets)

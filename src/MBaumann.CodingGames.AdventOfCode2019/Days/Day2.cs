@@ -32,7 +32,7 @@ namespace MBaumann.CodingGames.AdventOfCode2019.Days
             return v_RawInput.Split(new[] { ',' }).Select(int.Parse).ToArray();
         }
 
-        public static int RunProgram(int[] p_OpCodes, int p_Noun, int p_Verb)
+        internal static int RunProgram(int[] p_OpCodes, int p_Noun, int p_Verb)
         {
             int[] v_OpCodes = (int[])p_OpCodes.Clone();
 
@@ -42,7 +42,7 @@ namespace MBaumann.CodingGames.AdventOfCode2019.Days
             return ComputeOpCodes(v_OpCodes).First();
         }
 
-        public static int[] ComputeOpCodes(int[] p_OpCodes)
+        internal static int[] ComputeOpCodes(int[] p_OpCodes)
         {
             foreach (var v_Item in p_OpCodes.Batch(4))
             {
