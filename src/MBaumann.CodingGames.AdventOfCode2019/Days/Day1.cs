@@ -19,7 +19,7 @@ namespace MBaumann.CodingGames.AdventOfCode2019.Days
         {
             int v_Result = 0;
 
-            foreach (string v_Line in File.ReadAllLines($"Inputs{Path.DirectorySeparatorChar}Day1.txt"))
+            foreach (string v_Line in File.ReadAllLines($"Inputs{Path.DirectorySeparatorChar}2019Day1.txt"))
             {
                 int v_ModuleMass = int.Parse(v_Line);
 

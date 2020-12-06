@@ -10,12 +10,12 @@ namespace MBaumann.CodingGames.AdventOfCode2020.Days
     {
         public static int FirstPart()
         {
-            return CountForAnyonePlane(File.ReadAllText($"Inputs{Path.DirectorySeparatorChar}Day6.txt"));
+            return CountForAnyonePlane(File.ReadAllText($"Inputs{Path.DirectorySeparatorChar}2020Day6.txt"));
         }
 
         internal static int SecondPart()
         {
-            return CountForEveryonePlane(File.ReadAllText($"Inputs{Path.DirectorySeparatorChar}Day6.txt"));
+            return CountForEveryonePlane(File.ReadAllText($"Inputs{Path.DirectorySeparatorChar}2020Day6.txt"));
         }
 
         public static int CountForAnyoneGroup(string p_Input)

@@ -11,14 +11,14 @@ namespace MBaumann.CodingGames.AdventOfCode2019.Days
     {
         public static int FirstPart()
         {
-            string[] v_RawInput = File.ReadAllLines($"Inputs{Path.DirectorySeparatorChar}Day3.txt");
+            string[] v_RawInput = File.ReadAllLines($"Inputs{Path.DirectorySeparatorChar}2019Day3.txt");
 
             return ComputeDistance(v_RawInput[0], v_RawInput[1]);
         }
 
         public static int SecondPart()
         {
-            string[] v_RawInput = File.ReadAllLines($"Inputs{Path.DirectorySeparatorChar}Day3.txt");
+            string[] v_RawInput = File.ReadAllLines($"Inputs{Path.DirectorySeparatorChar}2019Day3.txt");
 
             return ComputeSteps(v_RawInput[0], v_RawInput[1]);
         }

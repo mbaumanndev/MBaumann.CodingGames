@@ -9,14 +9,14 @@ namespace MBaumann.CodingGames.AdventOfCode2020.Days
     {
         public static int FirstPart()
         {
-            return File.ReadAllLines($"Inputs{Path.DirectorySeparatorChar}Day5.txt")
+            return File.ReadAllLines($"Inputs{Path.DirectorySeparatorChar}2020Day5.txt")
                 .Select(GetSeatCoords)
                 .Max(e => GetSeatId(e.Item1, e.Item2));
         }
 
         public static int SecondPart()
         {
-            var v_Seats = File.ReadAllLines($"Inputs{Path.DirectorySeparatorChar}Day5.txt")
+            var v_Seats = File.ReadAllLines($"Inputs{Path.DirectorySeparatorChar}2020Day5.txt")
                 .Select(GetSeatCoords)
                 .Select(e => GetSeatId(e.Item1, e.Item2))
                 .ToList();

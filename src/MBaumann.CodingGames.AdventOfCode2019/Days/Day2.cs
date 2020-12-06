@@ -28,7 +28,7 @@ namespace MBaumann.CodingGames.AdventOfCode2019.Days
 
         private static int[] GetInput()
         {
-            string v_RawInput = File.ReadAllText($"Inputs{Path.DirectorySeparatorChar}Day2.txt");
+            string v_RawInput = File.ReadAllText($"Inputs{Path.DirectorySeparatorChar}2019Day2.txt");
             return v_RawInput.Split(new[] { ',' }).Select(int.Parse).ToArray();
         }
 

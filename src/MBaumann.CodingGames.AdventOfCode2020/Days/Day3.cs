@@ -13,13 +13,13 @@ namespace MBaumann.CodingGames.AdventOfCode2020.Days
         
         public static long FirstPart()
         {
-            return CountTrees(File.ReadAllText($"Inputs{Path.DirectorySeparatorChar}Day3.txt"), "R3,D1");
+            return CountTrees(File.ReadAllText($"Inputs{Path.DirectorySeparatorChar}2020Day3.txt"), "R3,D1");
         }
 
         public static long SecondPart()
         {
             return new[] {"R1,D1", "R3,D1", "R5,D1", "R7,D1", "R1,D2"}
-                .Select(s => Day3.CountTrees(File.ReadAllText($"Inputs{Path.DirectorySeparatorChar}Day3.txt"), s))
+                .Select(s => Day3.CountTrees(File.ReadAllText($"Inputs{Path.DirectorySeparatorChar}2020Day3.txt"), s))
                 .Aggregate((a, b) => a * b);
         }
 

@@ -2,26 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <LangVersion>9.0</LangVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Days\Day1.fs" />
+    <Compile Include="AOC2018.fs" />
+  </ItemGroup>
 
   <ItemGroup>
     <Content Include="Inputs\*.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="Inputs\2020Day1.txt" />
-    <None Remove="Inputs\2020Day2.txt" />
-    <None Remove="Inputs\2020Day3.txt" />
-    <None Remove="Inputs\2020Day4.txt" />
-    <None Remove="Inputs\2020Day5.txt" />
-    <None Remove="Inputs\2020Day6.txt" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="morelinq" Version="3.3.2" />
   </ItemGroup>
 
   <ItemGroup>

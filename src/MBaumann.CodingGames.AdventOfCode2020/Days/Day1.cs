@@ -28,7 +28,7 @@ namespace MBaumann.CodingGames.AdventOfCode2020.Days
 
         private static IEnumerable<int> ReadLines()
         {
-            return File.ReadAllLines($"Inputs{Path.DirectorySeparatorChar}Day1.txt").Select(int.Parse);
+            return File.ReadAllLines($"Inputs{Path.DirectorySeparatorChar}2020Day1.txt").Select(int.Parse);
         }
     }
 }

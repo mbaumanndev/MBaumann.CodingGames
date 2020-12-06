@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MBaumann.CodingGames.AdventOfCode2018.FSharp\MBaumann.CodingGames.AdventOfCode2018.FSharp.fsproj" />
     <ProjectReference Include="..\MBaumann.CodingGames.AdventOfCode2019\MBaumann.CodingGames.AdventOfCode2019.csproj" />
     <ProjectReference Include="..\MBaumann.CodingGames.AdventOfCode2020\MBaumann.CodingGames.AdventOfCode2020.csproj" />
     <ProjectReference Include="..\MBaumann.CodingGames.Common\MBaumann.CodingGames.Common.csproj" />

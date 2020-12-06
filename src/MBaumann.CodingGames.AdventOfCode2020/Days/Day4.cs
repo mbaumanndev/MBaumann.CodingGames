@@ -11,12 +11,12 @@ namespace MBaumann.CodingGames.AdventOfCode2020.Days
     {
         public static int FirstPart()
         {
-            return ValidPassportsCount(File.ReadAllText($"Inputs{Path.DirectorySeparatorChar}Day4.txt"));
+            return ValidPassportsCount(File.ReadAllText($"Inputs{Path.DirectorySeparatorChar}2020Day4.txt"));
         }
         
         public static int SecondPart()
         {
-            return ValidPassportsCountPart2(File.ReadAllText($"Inputs{Path.DirectorySeparatorChar}Day4.txt"));
+            return ValidPassportsCountPart2(File.ReadAllText($"Inputs{Path.DirectorySeparatorChar}2020Day4.txt"));
         }
         public static int ValidPassportsCount(string p_Input)
         {

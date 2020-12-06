@@ -12,13 +12,13 @@ namespace MBaumann.CodingGames.AdventOfCode2020.Days
         private static readonly Regex PASSWORD_POLICY_REGEX = new Regex(@"(\d+)-(\d+) ([a-z]{1}): ([a-z]+)", RegexOptions.Compiled);
         internal static int FirstPart()
         {
-            return File.ReadAllLines($"Inputs{Path.DirectorySeparatorChar}Day2.txt")
+            return File.ReadAllLines($"Inputs{Path.DirectorySeparatorChar}2020Day2.txt")
                 .Count(p_Policy => PasswordWithPolicy(p_Policy, PasswordMatchPolicy));
         }
 
         public static int SecondPart()
         {
-            return File.ReadAllLines($"Inputs{Path.DirectorySeparatorChar}Day2.txt")
+            return File.ReadAllLines($"Inputs{Path.DirectorySeparatorChar}2020Day2.txt")
                 .Count(p_Policy => PasswordWithPolicy(p_Policy, PasswordMatchNewPolicy));
         }
 

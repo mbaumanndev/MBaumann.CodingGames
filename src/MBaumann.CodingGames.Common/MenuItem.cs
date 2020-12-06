@@ -7,6 +7,9 @@ namespace MBaumann.CodingGames.Common
         public MenuItem(string p_Title, MenuItem[] p_Items) : this(p_Title, null, p_Items)
         {
         }
+        public MenuItem(string p_Title, PuzzleMenuItem[] p_Items) : this(p_Title, null, p_Items)
+        {
+        }
 
         public MenuItem(string p_Title, Action p_Action) : this(p_Title, p_Action, new MenuItem[0])
         {
