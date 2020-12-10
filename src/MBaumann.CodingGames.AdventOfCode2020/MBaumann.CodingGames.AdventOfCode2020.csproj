@@ -12,12 +12,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="IsExternalInit.cs" Condition="'$(TargetFramework)' == 'net5.0'" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Inputs\2020Day1.txt" />
     <None Remove="Inputs\2020Day2.txt" />
     <None Remove="Inputs\2020Day3.txt" />
     <None Remove="Inputs\2020Day4.txt" />
     <None Remove="Inputs\2020Day5.txt" />
     <None Remove="Inputs\2020Day6.txt" />
+    <None Remove="Inputs\2020Day7.txt" />
   </ItemGroup>
 
   <ItemGroup>
