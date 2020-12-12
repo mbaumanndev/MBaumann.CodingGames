@@ -75,7 +75,7 @@ iyr:2010 hgt:158cm hcl:#b6652a ecl:blu byr:1944 eyr:2021 pid:093154719";
         [Fact]
         public void Day4ShouldWork()
         {
-            Check.That(Day4.ValidPassportsCountPart2(File.ReadAllText($"Inputs{Path.DirectorySeparatorChar}Day4.txt")))
+            Check.That(Day4.ValidPassportsCountPart2(File.ReadAllText($"Inputs{Path.DirectorySeparatorChar}2020Day4.txt")))
                 .IsEqualTo(131);
         }
 
@@ -92,7 +92,7 @@ byr:1941 iyr:2010 pid:722056139", false)]
         [Fact]
         public void Day4Debug()
         {
-            var v_Input = File.ReadAllText($"Inputs{Path.DirectorySeparatorChar}Day4.txt")
+            var v_Input = File.ReadAllText($"Inputs{Path.DirectorySeparatorChar}2020Day4.txt")
                 .Split(new[] {"\n\n"}, StringSplitOptions.RemoveEmptyEntries);
             var v_JsonCheck =
                 JsonConvert.DeserializeObject<JsonCheck>(

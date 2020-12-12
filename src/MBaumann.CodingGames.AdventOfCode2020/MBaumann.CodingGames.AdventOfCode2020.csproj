@@ -23,6 +23,7 @@
     <None Remove="Inputs\2020Day5.txt" />
     <None Remove="Inputs\2020Day6.txt" />
     <None Remove="Inputs\2020Day7.txt" />
+    <None Remove="Inputs\2020Day8.txt" />
   </ItemGroup>
 
   <ItemGroup>
