@@ -25,6 +25,8 @@ namespace MBaumann.CodingGames.AdventOfCode2020
                 new PuzzleMenuItem("Day 7 - Part 2", () => Console.WriteLine(Day7.SecondPart())),
                 new PuzzleMenuItem("Day 8 - Part 1", () => Console.WriteLine(Day8.FirstPart())),
                 new PuzzleMenuItem("Day 8 - Part 2", () => Console.WriteLine(Day8.SecondPart())),
+                new PuzzleMenuItem("Day 9 - Part 1", () => Console.WriteLine(Day9.FirstPart())),
+                new PuzzleMenuItem("Day 9 - Part 2", () => Console.WriteLine(Day9.SecondPart())),
             });
         }
     }
