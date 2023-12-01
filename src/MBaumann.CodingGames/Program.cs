@@ -1,6 +1,7 @@
 ﻿using MBaumann.CodingGames.AdventOfCode2018.FSharp;
 using MBaumann.CodingGames.AdventOfCode2019;
 using MBaumann.CodingGames.AdventOfCode2020;
+using MBaumann.CodingGames.AdventOfCode2023.FSharp;
 using MBaumann.CodingGames.Common;
 
 namespace MBaumann.CodingGames
@@ -15,6 +16,7 @@ namespace MBaumann.CodingGames
                 (new FSAOC.AOC2018() as IGame).GetGameMenu(),
                 new AOC2019().GetGameMenu(),
                 new AOC2020().GetGameMenu(),
+                (new FSAOC2023.AOC2023() as IGame).GetGameMenu(),
                 new MenuItem("Exit", Exit)
             });
 

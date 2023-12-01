@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Days\Day1.fs" />
+    <Compile Include="AOC2023.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Inputs\*.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MBaumann.CodingGames.Common\MBaumann.CodingGames.Common.csproj" />
+    <ProjectReference Include="..\MBaumann.CommonTools\MBaumann.CommonTools.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleToSuffix Include=".Tests" />
+  </ItemGroup>
+</Project>

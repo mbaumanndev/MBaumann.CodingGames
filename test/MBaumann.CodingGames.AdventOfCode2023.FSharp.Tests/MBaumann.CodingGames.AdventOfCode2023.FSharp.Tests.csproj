@@ -1,15 +1,22 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
 
     <IsPackable>false</IsPackable>
-
-    <LangVersion>8.0</LangVersion>
+    <IsTestProject>true</IsTestProject>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="coverlet.msbuild" Version="6.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="NFluent" Version="3.0.1.352" />
+    <PackageReference Include="NFluent.Analyzer" Version="0.1.0" />
     <PackageReference Include="xunit" Version="2.6.2" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.5.4">
       <PrivateAssets>all</PrivateAssets>
@@ -22,7 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\MBaumann.CodingGames.AdventOfCode2019\MBaumann.CodingGames.AdventOfCode2019.csproj" />
+    <ProjectReference Include="..\..\src\MBaumann.CodingGames.AdventOfCode2023.FSharp\MBaumann.CodingGames.AdventOfCode2023.FSharp.fsproj" />
   </ItemGroup>
 
 </Project>
