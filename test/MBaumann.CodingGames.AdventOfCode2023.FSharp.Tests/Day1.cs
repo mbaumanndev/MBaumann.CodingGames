@@ -25,8 +25,7 @@ namespace MBamann.CodingGames.AdventOfCode2023.FSharp.Tests
         [InlineData("7pqrstsixteen", "76")]
         public void Part2(string sequence, string expected)
         {
-            var converted = Day1.FindCalibrationValue2(sequence);
-            Check.That(Day1.FindCalibrationValue(converted)).IsEqualTo(expected);
+            Check.That(Day1.FindCalibrationValue2(sequence)).IsEqualTo(expected);
         }
     }
 }
